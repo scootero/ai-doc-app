@@ -4,13 +4,17 @@
 export type Section = {
   title: string;
   content: string;
+  images?: string[]; // Add this
 };
+
 
 export type Project = {
   id: string;
   name: string;
-  sections: Section[];
+  sections: { title: string; content: string }[];
+  images?: string[]; // ✅ Add this line
 };
+
 
 export const dummyProjects: Project[] = [
   {
